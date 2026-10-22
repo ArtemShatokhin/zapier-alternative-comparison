@@ -18,7 +18,7 @@ The trade-off is real: a self-hosted stack is a server you now operate. Kortix k
 
 A self-hosted Kortix instance is the full Kortix platform on a server you control: one Docker Compose stack that the `kortix self-host` CLI installs, configures, and updates ([Kortix self-hosting](https://kortix.com/docs/host)). One Compose project, named `kortix-<instance>`, holds every service: the web frontend, the API, the LLM gateway, a database migration job, a daily updater, the database and storage services, and Caddy for TLS in domain mode.
 
-Two facts matter before you start. Sessions run on a cloud sandbox provider rather than on the server, so the instance must be reachable from the internet for those sandboxes to call back. And you need a sandbox provider key (Daytona, Platinum, or E2B) and a model provider key, which you add in the web app after the first sign-in.
+Two facts matter before you start. Sessions run on a cloud sandbox provider rather than on the server, so the instance must be reachable from the internet for those sandboxes to call back. And you need a sandbox provider key (Platinum or the legacy Daytona fallback) and a model provider key, which you add in the web app after the first sign-in.
 
 The host needs a Linux server with a public IP, DNS `A` or `AAAA` records for the domain and its `api.` subdomain, ports 80 and 443 open, and a wildcard record for sandbox previews.
 
